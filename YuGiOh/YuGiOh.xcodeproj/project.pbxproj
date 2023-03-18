@@ -9,21 +9,29 @@
 /* Begin PBXBuildFile section */
 		7452DDF929C5D5F400FB579A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7452DDF829C5D5F400FB579A /* AppDelegate.swift */; };
 		7452DDFB29C5D5F400FB579A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7452DDFA29C5D5F400FB579A /* SceneDelegate.swift */; };
-		7452DDFD29C5D5F400FB579A /* MainTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7452DDFC29C5D5F400FB579A /* MainTabBar.swift */; };
+		7452DDFD29C5D5F400FB579A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7452DDFC29C5D5F400FB579A /* MainViewController.swift */; };
 		7452DE0329C5D5F400FB579A /* YuGiOh.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7452DE0129C5D5F400FB579A /* YuGiOh.xcdatamodeld */; };
 		7452DE0529C5D5F500FB579A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7452DE0429C5D5F500FB579A /* Assets.xcassets */; };
 		7452DE0829C5D5F500FB579A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7452DE0629C5D5F500FB579A /* LaunchScreen.storyboard */; };
+		7452DE1429C6031D00FB579A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7452DE1329C6031D00FB579A /* LoginViewController.swift */; };
+		7452DE1729C6037600FB579A /* CardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7452DE1629C6037600FB579A /* CardsViewController.swift */; };
+		7452DE1A29C6044800FB579A /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7452DE1929C6044800FB579A /* SettingsViewController.swift */; };
+		7452DE1D29C606E700FB579A /* YuGiButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7452DE1C29C606E700FB579A /* YuGiButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		7452DDF529C5D5F400FB579A /* YuGiOh.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YuGiOh.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7452DDF829C5D5F400FB579A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7452DDFA29C5D5F400FB579A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		7452DDFC29C5D5F400FB579A /* MainTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBar.swift; sourceTree = "<group>"; };
+		7452DDFC29C5D5F400FB579A /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		7452DE0229C5D5F400FB579A /* YuGiOh.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = YuGiOh.xcdatamodel; sourceTree = "<group>"; };
 		7452DE0429C5D5F500FB579A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7452DE0729C5D5F500FB579A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7452DE0929C5D5F500FB579A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7452DE1329C6031D00FB579A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		7452DE1629C6037600FB579A /* CardsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsViewController.swift; sourceTree = "<group>"; };
+		7452DE1929C6044800FB579A /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		7452DE1C29C606E700FB579A /* YuGiButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YuGiButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +64,75 @@
 		7452DDF729C5D5F400FB579A /* YuGiOh */ = {
 			isa = PBXGroup;
 			children = (
-				7452DDF829C5D5F400FB579A /* AppDelegate.swift */,
-				7452DDFA29C5D5F400FB579A /* SceneDelegate.swift */,
-				7452DDFC29C5D5F400FB579A /* MainTabBar.swift */,
-				7452DE0429C5D5F500FB579A /* Assets.xcassets */,
-				7452DE0629C5D5F500FB579A /* LaunchScreen.storyboard */,
+				7452DE1B29C606B700FB579A /* Components */,
+				7452DE1229C602E100FB579A /* Resources */,
+				7452DE0F29C602C300FB579A /* Scenes */,
 				7452DE0929C5D5F500FB579A /* Info.plist */,
 				7452DE0129C5D5F400FB579A /* YuGiOh.xcdatamodeld */,
 			);
 			path = YuGiOh;
+			sourceTree = "<group>";
+		};
+		7452DE0F29C602C300FB579A /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				7452DE1829C6043F00FB579A /* Settings */,
+				7452DE1529C6035F00FB579A /* Cards */,
+				7452DE1129C602D400FB579A /* Main */,
+				7452DE1029C602CD00FB579A /* Login */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		7452DE1029C602CD00FB579A /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				7452DE1329C6031D00FB579A /* LoginViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		7452DE1129C602D400FB579A /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				7452DDFC29C5D5F400FB579A /* MainViewController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		7452DE1229C602E100FB579A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7452DDF829C5D5F400FB579A /* AppDelegate.swift */,
+				7452DDFA29C5D5F400FB579A /* SceneDelegate.swift */,
+				7452DE0429C5D5F500FB579A /* Assets.xcassets */,
+				7452DE0629C5D5F500FB579A /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		7452DE1529C6035F00FB579A /* Cards */ = {
+			isa = PBXGroup;
+			children = (
+				7452DE1629C6037600FB579A /* CardsViewController.swift */,
+			);
+			path = Cards;
+			sourceTree = "<group>";
+		};
+		7452DE1829C6043F00FB579A /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				7452DE1929C6044800FB579A /* SettingsViewController.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		7452DE1B29C606B700FB579A /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				7452DE1C29C606E700FB579A /* YuGiButton.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,8 +206,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				7452DE0329C5D5F400FB579A /* YuGiOh.xcdatamodeld in Sources */,
-				7452DDFD29C5D5F400FB579A /* MainTabBar.swift in Sources */,
+				7452DDFD29C5D5F400FB579A /* MainViewController.swift in Sources */,
+				7452DE1A29C6044800FB579A /* SettingsViewController.swift in Sources */,
+				7452DE1729C6037600FB579A /* CardsViewController.swift in Sources */,
 				7452DDF929C5D5F400FB579A /* AppDelegate.swift in Sources */,
+				7452DE1D29C606E700FB579A /* YuGiButton.swift in Sources */,
+				7452DE1429C6031D00FB579A /* LoginViewController.swift in Sources */,
 				7452DDFB29C5D5F400FB579A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  SettingsViewController.swift
 //  YuGiOh
 //
 //  Created by Furkan Sarı on 18.03.2023.
@@ -7,13 +7,15 @@
 
 import UIKit
 
-final class MainTabBar: UITabBarController {
+class SettingsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .red
-        
+
+        view.backgroundColor = .systemPink
     }
     
-}
 
+    
+
+}
