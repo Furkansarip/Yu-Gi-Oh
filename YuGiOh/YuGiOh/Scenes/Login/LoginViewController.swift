@@ -8,14 +8,21 @@
 import UIKit
 
 class LoginViewController: UIViewController {
-
+    let loginView = LoginView()
     override func viewDidLoad() {
         super.viewDidLoad()
 
         view.backgroundColor = .orange
+        view.addSubview(loginView)
+        login()
     }
     
-
+    private func login() {
+     
+        NSLayoutConstraint.activate([
+            
+        ])
+    }
     
 
 }
