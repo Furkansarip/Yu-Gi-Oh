@@ -11,6 +11,7 @@ final class YuGiButton : UIButton {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        configureButton()
     }
     
     required init?(coder: NSCoder) {
