@@ -11,10 +11,11 @@ class LoginView: UIView {
     
     let usernameTextField = UITextField()
     let passwordTextField = UITextField()
+    let dividerView = UIView()
     let stackView = UIStackView()
     override init(frame: CGRect) {
         super.init(frame: frame)
-        backgroundColor = .red
+       
         configureView()
     }
     
@@ -24,22 +25,30 @@ class LoginView: UIView {
     
     private func configureView() {
         translatesAutoresizingMaskIntoConstraints = false
+        layer.cornerRadius = 10
+        //clipsToBounds = true
         addSubview(stackView)
+        
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.axis = .vertical
-        stackView.backgroundColor = .systemGreen
+       
+        stackView.backgroundColor = .systemBackground
         stackView.spacing = 8
         usernameTextField.placeholder = "Username"
+        
         passwordTextField.placeholder = "Password"
         passwordTextField.isSecureTextEntry = true
-      
+        dividerView.backgroundColor = .secondarySystemFill
         stackView.addArrangedSubview(usernameTextField)
+        stackView.addArrangedSubview(dividerView)
         stackView.addArrangedSubview(passwordTextField)
         
         NSLayoutConstraint.activate([
-            
-            stackView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 10),
-            stackView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -10),
+                        stackView.topAnchor.constraint(equalToSystemSpacingBelow: safeAreaLayoutGuide.topAnchor, multiplier: 3),
+                        stackView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 10),
+                        stackView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -10),
+                        dividerView.heightAnchor.constraint(equalToConstant: 1)
+                        //stackView.bottomAnchor.constraint(equalToSystemSpacingBelow: safeAreaLayoutGuide.bottomAnchor, multiplier: -3)
             
         ])
         
