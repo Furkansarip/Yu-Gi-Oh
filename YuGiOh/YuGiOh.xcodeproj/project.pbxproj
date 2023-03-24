@@ -24,6 +24,10 @@
 		7452DE2B29CD986400FB579A /* CardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7452DE2729CD986400FB579A /* CardCell.swift */; };
 		7452DE2C29CD986400FB579A /* CardCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7452DE2829CD986400FB579A /* CardCell.xib */; };
 		7452DE2E29CD98D000FB579A /* YuGiImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7452DE2D29CD98D000FB579A /* YuGiImage.swift */; };
+		7452DE3129CD99BC00FB579A /* MaterialActivityIndicator in Frameworks */ = {isa = PBXBuildFile; productRef = 7452DE3029CD99BC00FB579A /* MaterialActivityIndicator */; };
+		7452DE3329CD99D700FB579A /* CardsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7452DE3229CD99D700FB579A /* CardsViewModel.swift */; };
+		7452DE3729CD9A5D00FB579A /* APIServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7452DE3529CD9A5D00FB579A /* APIServices.swift */; };
+		7452DE3829CD9A5D00FB579A /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7452DE3629CD9A5D00FB579A /* NetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +50,9 @@
 		7452DE2729CD986400FB579A /* CardCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardCell.swift; sourceTree = "<group>"; };
 		7452DE2829CD986400FB579A /* CardCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CardCell.xib; sourceTree = "<group>"; };
 		7452DE2D29CD98D000FB579A /* YuGiImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YuGiImage.swift; sourceTree = "<group>"; };
+		7452DE3229CD99D700FB579A /* CardsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardsViewModel.swift; sourceTree = "<group>"; };
+		7452DE3529CD9A5D00FB579A /* APIServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIServices.swift; sourceTree = "<group>"; };
+		7452DE3629CD9A5D00FB579A /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7452DE3129CD99BC00FB579A /* MaterialActivityIndicator in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +86,7 @@
 		7452DDF729C5D5F400FB579A /* YuGiOh */ = {
 			isa = PBXGroup;
 			children = (
+				7452DE3429CD9A5D00FB579A /* Services */,
 				7452DE1B29C606B700FB579A /* Components */,
 				7452DE1229C602E100FB579A /* Resources */,
 				7452DE0F29C602C300FB579A /* Scenes */,
@@ -130,9 +139,10 @@
 		7452DE1529C6035F00FB579A /* Cards */ = {
 			isa = PBXGroup;
 			children = (
+				7452DE1629C6037600FB579A /* CardsViewController.swift */,
+				7452DE3229CD99D700FB579A /* CardsViewModel.swift */,
 				7452DE2329CD986400FB579A /* Model */,
 				7452DE2629CD986400FB579A /* View */,
-				7452DE1629C6037600FB579A /* CardsViewController.swift */,
 			);
 			path = Cards;
 			sourceTree = "<group>";
@@ -180,6 +190,15 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		7452DE3429CD9A5D00FB579A /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				7452DE3529CD9A5D00FB579A /* APIServices.swift */,
+				7452DE3629CD9A5D00FB579A /* NetworkManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -196,6 +215,9 @@
 			dependencies = (
 			);
 			name = YuGiOh;
+			packageProductDependencies = (
+				7452DE3029CD99BC00FB579A /* MaterialActivityIndicator */,
+			);
 			productName = YuGiOh;
 			productReference = 7452DDF529C5D5F400FB579A /* YuGiOh.app */;
 			productType = "com.apple.product-type.application";
@@ -224,6 +246,9 @@
 				Base,
 			);
 			mainGroup = 7452DDEC29C5D5F400FB579A;
+			packageReferences = (
+				7452DE2F29CD99BC00FB579A /* XCRemoteSwiftPackageReference "MaterialActivityIndicator" */,
+			);
 			productRefGroup = 7452DDF629C5D5F400FB579A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -253,6 +278,7 @@
 			files = (
 				7452DE0329C5D5F400FB579A /* YuGiOh.xcdatamodeld in Sources */,
 				7452DDFD29C5D5F400FB579A /* MainViewController.swift in Sources */,
+				7452DE3329CD99D700FB579A /* CardsViewModel.swift in Sources */,
 				7452DE2929CD986400FB579A /* DataModel.swift in Sources */,
 				7452DE2E29CD98D000FB579A /* YuGiImage.swift in Sources */,
 				7452DE1A29C6044800FB579A /* SettingsViewController.swift in Sources */,
@@ -260,6 +286,8 @@
 				7452DE2A29CD986400FB579A /* CardModel.swift in Sources */,
 				7452DE1729C6037600FB579A /* CardsViewController.swift in Sources */,
 				7452DDF929C5D5F400FB579A /* AppDelegate.swift in Sources */,
+				7452DE3829CD9A5D00FB579A /* NetworkManager.swift in Sources */,
+				7452DE3729CD9A5D00FB579A /* APIServices.swift in Sources */,
 				7452DE1D29C606E700FB579A /* YuGiButton.swift in Sources */,
 				7452DE1429C6031D00FB579A /* LoginViewController.swift in Sources */,
 				7452DE2229C74FA700FB579A /* FavoritesViewController.swift in Sources */,
@@ -476,6 +504,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7452DE2F29CD99BC00FB579A /* XCRemoteSwiftPackageReference "MaterialActivityIndicator" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/nspavlo/MaterialActivityIndicator.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.0.7;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7452DE3029CD99BC00FB579A /* MaterialActivityIndicator */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7452DE2F29CD99BC00FB579A /* XCRemoteSwiftPackageReference "MaterialActivityIndicator" */;
+			productName = MaterialActivityIndicator;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		7452DE0129C5D5F400FB579A /* YuGiOh.xcdatamodeld */ = {
