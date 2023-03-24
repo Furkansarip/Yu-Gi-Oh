@@ -48,6 +48,8 @@ class LoginViewController: UIViewController {
     
 
     @objc func login() {
-        navigationController?.pushViewController(MainViewController(), animated: true)
+        let tabBarVC = MainViewController()
+        tabBarVC.modalPresentationStyle = .fullScreen
+        present(tabBarVC,animated: true)
     }
 }
