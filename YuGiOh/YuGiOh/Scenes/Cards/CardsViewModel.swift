@@ -43,14 +43,7 @@ extension CardsViewModel : CardsViewModelProtocol {
         return allData.count
     }
     
-    func cardInfo(indexPath:IndexPath) -> (name:String,type:String,desc:String,imageURL:String?) {
-        let card = allData[indexPath.row]
-        return (
-            name:card.name,
-            type:card.type,
-            desc:card.desc,
-            imageURL:card.cardImages?.first?.imageURL)
-    }
+   
     
     
 }

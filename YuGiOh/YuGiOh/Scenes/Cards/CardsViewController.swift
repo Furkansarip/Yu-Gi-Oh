@@ -62,7 +62,7 @@ extension CardsViewController : CardsViewProtocol {
         DispatchQueue.main.async {
             self.activityIndicator.stopAnimating()
             print(self.viewModel.allData.count)
-            print(self.viewModel.allData[0].cardImages?.first?.imageURL)
+        
             self.tableView.reloadData()
         }
         

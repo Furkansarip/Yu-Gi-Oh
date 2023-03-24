@@ -8,20 +8,32 @@
 import UIKit
 
 class CardCell: UITableViewCell {
-
-    var cardImage : YuGiImage!
+    
+    
+    @IBOutlet weak var cardImage: UIImageView!
+    @IBOutlet weak var cardType: UILabel!
+    @IBOutlet weak var cardName: UILabel!
+    @IBOutlet weak var cardDesc: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        cardName.adjustsFontSizeToFitWidth = true
+        cardDesc.numberOfLines = 0
+        cardDesc.adjustsFontSizeToFitWidth = false
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        
         // Configure the view for the selected state
     }
     func configure(with card:CardModel) {
-     //print(card)
-        print(card.cardImages?.first?.imageURL)
+        cardName.text = card.name
+        cardType.text = card.type
+        cardDesc.text = card.desc
+        guard let urlString = card.cardImages?.first?.imageURL else { return }
+        print(urlString)
+        cardImage.downloadImage(cardURL: urlString)
+        
     }
 }
