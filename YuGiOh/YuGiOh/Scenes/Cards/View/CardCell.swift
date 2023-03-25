@@ -14,7 +14,7 @@ class CardCell: UITableViewCell {
     @IBOutlet weak var cardType: UILabel!
     @IBOutlet weak var cardName: UILabel!
     @IBOutlet weak var cardDesc: UILabel!
-    
+    private var type : Types?
     override func awakeFromNib() {
         super.awakeFromNib()
         cardName.adjustsFontSizeToFitWidth = true
@@ -30,6 +30,7 @@ class CardCell: UITableViewCell {
     func configure(with card:CardModel) {
         cardName.text = card.name
         cardType.text = card.type
+        cardType.textColor = UIColor.typeColor(type: card.type)
         cardDesc.text = card.desc
         guard let urlString = card.cardImages?.first?.imageURL else { return }
         print(urlString)

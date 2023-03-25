@@ -30,6 +30,9 @@
 		7452DE3829CD9A5D00FB579A /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7452DE3629CD9A5D00FB579A /* NetworkManager.swift */; };
 		7452DE3A29CDD77D00FB579A /* YuGiImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7452DE3929CDD77C00FB579A /* YuGiImages.swift */; };
 		7452DE3D29CDD99700FB579A /* ImageView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7452DE3C29CDD99700FB579A /* ImageView+Ext.swift */; };
+		7452DE4029CDE70D00FB579A /* Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7452DE3F29CDE70D00FB579A /* Types.swift */; };
+		7452DE4229CEDD6400FB579A /* UIColor+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7452DE4129CEDD6400FB579A /* UIColor+Ext.swift */; };
+		7452DE4429CF217B00FB579A /* CoreDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7452DE4329CF217B00FB579A /* CoreDataService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +60,9 @@
 		7452DE3629CD9A5D00FB579A /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		7452DE3929CDD77C00FB579A /* YuGiImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YuGiImages.swift; sourceTree = "<group>"; };
 		7452DE3C29CDD99700FB579A /* ImageView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ImageView+Ext.swift"; sourceTree = "<group>"; };
+		7452DE3F29CDE70D00FB579A /* Types.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Types.swift; sourceTree = "<group>"; };
+		7452DE4129CEDD6400FB579A /* UIColor+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Ext.swift"; sourceTree = "<group>"; };
+		7452DE4329CF217B00FB579A /* CoreDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +96,7 @@
 		7452DDF729C5D5F400FB579A /* YuGiOh */ = {
 			isa = PBXGroup;
 			children = (
+				7452DE3E29CDE6F800FB579A /* Helper */,
 				7452DE3B29CDD98400FB579A /* Extensions */,
 				7452DE3429CD9A5D00FB579A /* Services */,
 				7452DE1B29C606B700FB579A /* Components */,
@@ -201,6 +208,7 @@
 			children = (
 				7452DE3529CD9A5D00FB579A /* APIServices.swift */,
 				7452DE3629CD9A5D00FB579A /* NetworkManager.swift */,
+				7452DE4329CF217B00FB579A /* CoreDataService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -209,8 +217,17 @@
 			isa = PBXGroup;
 			children = (
 				7452DE3C29CDD99700FB579A /* ImageView+Ext.swift */,
+				7452DE4129CEDD6400FB579A /* UIColor+Ext.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		7452DE3E29CDE6F800FB579A /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				7452DE3F29CDE70D00FB579A /* Types.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -290,12 +307,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7452DE4229CEDD6400FB579A /* UIColor+Ext.swift in Sources */,
 				7452DE3D29CDD99700FB579A /* ImageView+Ext.swift in Sources */,
 				7452DE0329C5D5F400FB579A /* YuGiOh.xcdatamodeld in Sources */,
 				7452DDFD29C5D5F400FB579A /* MainViewController.swift in Sources */,
+				7452DE4029CDE70D00FB579A /* Types.swift in Sources */,
 				7452DE3329CD99D700FB579A /* CardsViewModel.swift in Sources */,
 				7452DE2929CD986400FB579A /* DataModel.swift in Sources */,
 				7452DE2E29CD98D000FB579A /* YuGiImage.swift in Sources */,
+				7452DE4429CF217B00FB579A /* CoreDataService.swift in Sources */,
 				7452DE1A29C6044800FB579A /* SettingsViewController.swift in Sources */,
 				7452DE1F29C60BFE00FB579A /* LoginView.swift in Sources */,
 				7452DE2A29CD986400FB579A /* CardModel.swift in Sources */,

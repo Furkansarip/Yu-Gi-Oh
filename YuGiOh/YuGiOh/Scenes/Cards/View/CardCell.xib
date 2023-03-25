@@ -24,7 +24,7 @@
                         </constraints>
                     </imageView>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="D3S-jZ-Vfb">
-                        <rect key="frame" x="140" y="24.999999999999996" width="175" height="45.666666666666657"/>
+                        <rect key="frame" x="140" y="25.000000000000004" width="175" height="43.333333333333343"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Card Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q4f-kU-hnz">
                                 <rect key="frame" x="0.0" y="0.0" width="85.666666666666671" height="20.333333333333332"/>
@@ -33,15 +33,15 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hRw-9S-azo">
-                                <rect key="frame" x="0.0" y="25.333333333333336" width="37.333333333333336" height="20.333333333333336"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="0.0" y="25.333333333333336" width="33.333333333333336" height="18"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                     </stackView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X5G-2n-E9F">
-                        <rect key="frame" x="140" y="73.666666666666671" width="159" height="80.000000000000014"/>
+                        <rect key="frame" x="140" y="71.333333333333329" width="159" height="79.999999999999986"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="80" id="0rO-0K-QPl"/>
                         </constraints>

@@ -24,7 +24,8 @@ class CardsViewController: UIViewController {
         view.backgroundColor = .systemBackground
         
         title = "Cards"
-        navigationController?.navigationBar.prefersLargeTitles = true
+        //navigationController?.navigationBar.prefersLargeTitles = true
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(fetchData))
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -55,6 +56,10 @@ class CardsViewController: UIViewController {
             tableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
         ])
     }
+    
+    @objc func fetchData() {
+        CoreDataService.shared.getFavoriteCards()
+    }
 }
 
 extension CardsViewController : CardsViewProtocol {
@@ -79,6 +84,14 @@ extension CardsViewController : UITableViewDelegate,UITableViewDataSource {
         let data = viewModel.allData[indexPath.row]
         cell.configure(with: data)
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let card = viewModel.allData[indexPath.row]
+        let cardID : String = String(card.id ?? 0) 
+        CoreDataService.shared.addFavorite(cardID:cardID, cardName: card.name)
+        
+        
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

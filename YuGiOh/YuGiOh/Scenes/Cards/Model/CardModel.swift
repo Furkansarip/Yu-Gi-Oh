@@ -62,3 +62,8 @@ struct CardSet: Codable {
         case setPrice = "set_price"
     }
 }
+
+struct FavoriteCard {
+    let cardID : String
+    let cardName: String
+}
