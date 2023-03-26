@@ -17,32 +17,33 @@ class CoreDataService {
         
     }
     
-    func addFavorite(cardID:String, cardName:String) {
-        let entity = NSEntityDescription.entity(forEntityName: "Favorites", in: managedContext)!
+    func addFavorite(cardID:String, cardName:String, cardType:String) {
+        let entity = NSEntityDescription.entity(forEntityName: "FavoriteCardLists", in: managedContext)!
         let favoriteCard = NSManagedObject(entity: entity, insertInto: managedContext)
         favoriteCard.setValue(cardID, forKey: "cardID")
         favoriteCard.setValue(cardName, forKey: "cardName")
+        favoriteCard.setValue(cardType, forKey: "cardType")
         
         print(favoriteCard)
         do {
             try managedContext.save()
-           
+            
         } catch {
-            print("Erro")
+            print("Error")
         }
         
     }
     
-    func getFavoriteCards() -> [FavoriteCard] {
-            let fetch = NSFetchRequest<NSManagedObject>(entityName: "Favorites")
-            fetch.returnsObjectsAsFaults = false
-            do {
-                let favoritesCard = try managedContext.fetch(fetch)
-                print(favoritesCard)
-                return []
-            } catch {
-                print("Error")
-            }
-            return []
+    func getFavoriteCards() -> [FavoriteCardLists] {
+        let fetch = NSFetchRequest<NSManagedObject>(entityName: "FavoriteCardLists")
+        fetch.returnsObjectsAsFaults = false
+        do {
+            let favoritesCard = try managedContext.fetch(fetch)
+            print(favoritesCard)
+            return favoritesCard as! [FavoriteCardLists]
+        } catch {
+            print("Error")
         }
+        return []
+    }
 }

@@ -33,6 +33,10 @@
 		7452DE4029CDE70D00FB579A /* Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7452DE3F29CDE70D00FB579A /* Types.swift */; };
 		7452DE4229CEDD6400FB579A /* UIColor+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7452DE4129CEDD6400FB579A /* UIColor+Ext.swift */; };
 		7452DE4429CF217B00FB579A /* CoreDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7452DE4329CF217B00FB579A /* CoreDataService.swift */; };
+		7452DE4729CF2DC600FB579A /* CardDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7452DE4629CF2DC600FB579A /* CardDetailViewController.swift */; };
+		7452DE4A29CF494C00FB579A /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7452DE4929CF494C00FB579A /* FavoriteViewController.swift */; };
+		7452DE4C29D07A4F00FB579A /* SectionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7452DE4B29D07A4F00FB579A /* SectionType.swift */; };
+		7452DE4E29D07FAC00FB579A /* FavoriteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7452DE4D29D07FAC00FB579A /* FavoriteViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +67,10 @@
 		7452DE3F29CDE70D00FB579A /* Types.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Types.swift; sourceTree = "<group>"; };
 		7452DE4129CEDD6400FB579A /* UIColor+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Ext.swift"; sourceTree = "<group>"; };
 		7452DE4329CF217B00FB579A /* CoreDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataService.swift; sourceTree = "<group>"; };
+		7452DE4629CF2DC600FB579A /* CardDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailViewController.swift; sourceTree = "<group>"; };
+		7452DE4929CF494C00FB579A /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
+		7452DE4B29D07A4F00FB579A /* SectionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionType.swift; sourceTree = "<group>"; };
+		7452DE4D29D07FAC00FB579A /* FavoriteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +119,8 @@
 		7452DE0F29C602C300FB579A /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				7452DE4829CF493500FB579A /* FavoriteCards */,
+				7452DE4529CF2DA200FB579A /* CardDetail */,
 				7452DE2029C74F9100FB579A /* Favorites */,
 				7452DE1829C6043F00FB579A /* Settings */,
 				7452DE1529C6035F00FB579A /* Cards */,
@@ -226,8 +236,26 @@
 			isa = PBXGroup;
 			children = (
 				7452DE3F29CDE70D00FB579A /* Types.swift */,
+				7452DE4B29D07A4F00FB579A /* SectionType.swift */,
 			);
 			path = Helper;
+			sourceTree = "<group>";
+		};
+		7452DE4529CF2DA200FB579A /* CardDetail */ = {
+			isa = PBXGroup;
+			children = (
+				7452DE4629CF2DC600FB579A /* CardDetailViewController.swift */,
+			);
+			path = CardDetail;
+			sourceTree = "<group>";
+		};
+		7452DE4829CF493500FB579A /* FavoriteCards */ = {
+			isa = PBXGroup;
+			children = (
+				7452DE4929CF494C00FB579A /* FavoriteViewController.swift */,
+				7452DE4D29D07FAC00FB579A /* FavoriteViewModel.swift */,
+			);
+			path = FavoriteCards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -308,15 +336,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				7452DE4229CEDD6400FB579A /* UIColor+Ext.swift in Sources */,
+				7452DE4C29D07A4F00FB579A /* SectionType.swift in Sources */,
 				7452DE3D29CDD99700FB579A /* ImageView+Ext.swift in Sources */,
 				7452DE0329C5D5F400FB579A /* YuGiOh.xcdatamodeld in Sources */,
 				7452DDFD29C5D5F400FB579A /* MainViewController.swift in Sources */,
 				7452DE4029CDE70D00FB579A /* Types.swift in Sources */,
+				7452DE4729CF2DC600FB579A /* CardDetailViewController.swift in Sources */,
 				7452DE3329CD99D700FB579A /* CardsViewModel.swift in Sources */,
 				7452DE2929CD986400FB579A /* DataModel.swift in Sources */,
 				7452DE2E29CD98D000FB579A /* YuGiImage.swift in Sources */,
 				7452DE4429CF217B00FB579A /* CoreDataService.swift in Sources */,
 				7452DE1A29C6044800FB579A /* SettingsViewController.swift in Sources */,
+				7452DE4E29D07FAC00FB579A /* FavoriteViewModel.swift in Sources */,
 				7452DE1F29C60BFE00FB579A /* LoginView.swift in Sources */,
 				7452DE2A29CD986400FB579A /* CardModel.swift in Sources */,
 				7452DE1729C6037600FB579A /* CardsViewController.swift in Sources */,
@@ -328,6 +359,7 @@
 				7452DE1429C6031D00FB579A /* LoginViewController.swift in Sources */,
 				7452DE2229C74FA700FB579A /* FavoritesViewController.swift in Sources */,
 				7452DE2B29CD986400FB579A /* CardCell.swift in Sources */,
+				7452DE4A29CF494C00FB579A /* FavoriteViewController.swift in Sources */,
 				7452DDFB29C5D5F400FB579A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

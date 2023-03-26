@@ -22,14 +22,14 @@ class CardsViewController: UIViewController {
         indicatorSetup()
         viewModel.delegate = self
         view.backgroundColor = .systemBackground
-        
+        viewModel.viewDidLoad()
         title = "Cards"
         //navigationController?.navigationBar.prefersLargeTitles = true
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(fetchData))
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        viewModel.viewDidLoad()
+        
         print(viewModel.allData.count)
     }
     
@@ -58,7 +58,7 @@ class CardsViewController: UIViewController {
     }
     
     @objc func fetchData() {
-        CoreDataService.shared.getFavoriteCards()
+        print("fetch data")
     }
 }
 
@@ -67,7 +67,6 @@ extension CardsViewController : CardsViewProtocol {
         DispatchQueue.main.async {
             self.activityIndicator.stopAnimating()
             print(self.viewModel.allData.count)
-        
             self.tableView.reloadData()
         }
         
@@ -87,11 +86,10 @@ extension CardsViewController : UITableViewDelegate,UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let card = viewModel.allData[indexPath.row]
-        let cardID : String = String(card.id ?? 0) 
-        CoreDataService.shared.addFavorite(cardID:cardID, cardName: card.name)
-        
-        
+        let data = viewModel.allData[indexPath.row]
+        let dataID : String = String(data.id ?? 0)
+        CoreDataService.shared.addFavorite(cardID:dataID , cardName: data.name, cardType: data.type)
+        //navigationController?.pushViewController(CardDetailViewController(), animated: true)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

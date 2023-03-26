@@ -11,7 +11,7 @@ final class MainViewController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .red
+        view.backgroundColor = .systemBackground
         setupTabs()
         
     }
@@ -19,7 +19,7 @@ final class MainViewController: UITabBarController {
     private func setupTabs() {
         let cardsVC = CardsViewController()
         let settingsVC = SettingsViewController()
-        let favoritesVC = FavoritesViewController()
+        let favoritesVC = FavoriteViewController()
         UITabBar.appearance().backgroundColor = .systemBackground
         let nav1 = UINavigationController(rootViewController: cardsVC)
         let nav2 = UINavigationController(rootViewController: settingsVC)

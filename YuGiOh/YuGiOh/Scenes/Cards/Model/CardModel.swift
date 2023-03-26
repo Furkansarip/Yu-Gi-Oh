@@ -63,7 +63,8 @@ struct CardSet: Codable {
     }
 }
 
-struct FavoriteCard {
+struct FavoriteCardList  {
     let cardID : String
     let cardName: String
+    let cardType: String
 }
