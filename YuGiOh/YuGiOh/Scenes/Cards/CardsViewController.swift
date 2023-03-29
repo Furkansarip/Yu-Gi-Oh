@@ -86,10 +86,7 @@ extension CardsViewController : UITableViewDelegate,UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let data = viewModel.allData[indexPath.row]
-        let dataID : String = String(data.id ?? 0)
-        CoreDataService.shared.addFavorite(cardID:dataID , cardName: data.name, cardType: data.type)
-        //navigationController?.pushViewController(CardDetailViewController(), animated: true)
+        navigationController?.pushViewController(CardDetailViewController(), animated: true)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
