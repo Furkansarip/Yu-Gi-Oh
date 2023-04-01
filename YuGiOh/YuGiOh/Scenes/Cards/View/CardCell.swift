@@ -33,7 +33,7 @@ class CardCell: UITableViewCell {
         cardType.textColor = UIColor.typeColor(type: card.type)
         cardDesc.text = card.desc
         guard let urlString = card.cardImages?.first?.imageURL else { return }
-        print(urlString)
+        
         cardImage.downloadImage(cardURL: urlString)
         
     }

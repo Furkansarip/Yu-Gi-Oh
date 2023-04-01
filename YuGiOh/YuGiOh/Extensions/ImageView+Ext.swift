@@ -10,7 +10,6 @@ import UIKit
 extension UIImageView {
     func downloadImage(cardURL:String) {
         NetworkManager().getImage(imageURL: cardURL) { result in
-            print("h")
             switch result {
             case .success(let success):
                 DispatchQueue.main.async {

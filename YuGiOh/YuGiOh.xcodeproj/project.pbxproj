@@ -37,6 +37,7 @@
 		7452DE4A29CF494C00FB579A /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7452DE4929CF494C00FB579A /* FavoriteViewController.swift */; };
 		7452DE4C29D07A4F00FB579A /* SectionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7452DE4B29D07A4F00FB579A /* SectionType.swift */; };
 		7452DE4E29D07FAC00FB579A /* FavoriteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7452DE4D29D07FAC00FB579A /* FavoriteViewModel.swift */; };
+		74E039DD29D8833000A13B8A /* CardDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E039DC29D8833000A13B8A /* CardDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -71,6 +72,7 @@
 		7452DE4929CF494C00FB579A /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
 		7452DE4B29D07A4F00FB579A /* SectionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionType.swift; sourceTree = "<group>"; };
 		7452DE4D29D07FAC00FB579A /* FavoriteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewModel.swift; sourceTree = "<group>"; };
+		74E039DC29D8833000A13B8A /* CardDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -209,6 +211,7 @@
 			children = (
 				7452DE2729CD986400FB579A /* CardCell.swift */,
 				7452DE2829CD986400FB579A /* CardCell.xib */,
+				74E039DC29D8833000A13B8A /* CardDetailView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -353,6 +356,7 @@
 				7452DE1729C6037600FB579A /* CardsViewController.swift in Sources */,
 				7452DDF929C5D5F400FB579A /* AppDelegate.swift in Sources */,
 				7452DE3829CD9A5D00FB579A /* NetworkManager.swift in Sources */,
+				74E039DD29D8833000A13B8A /* CardDetailView.swift in Sources */,
 				7452DE3729CD9A5D00FB579A /* APIServices.swift in Sources */,
 				7452DE1D29C606E700FB579A /* YuGiButton.swift in Sources */,
 				7452DE3A29CDD77D00FB579A /* YuGiImages.swift in Sources */,

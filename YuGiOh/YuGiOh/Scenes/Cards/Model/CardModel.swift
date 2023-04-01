@@ -14,9 +14,10 @@ struct CardModel : Codable {
     let cardSets: [CardSet]?
     let cardImages: [CardImage]?
     let cardPrices: [CardPrice]?
+    let attribute: String?
     
     enum CodingKeys: String, CodingKey {
-        case id, name, type, frameType, desc, race, archetype
+        case id, name, type, frameType, desc, race, archetype, attribute
         case cardSets = "card_sets"
         case cardImages = "card_images"
         case cardPrices = "card_prices"

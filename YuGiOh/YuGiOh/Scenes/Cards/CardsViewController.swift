@@ -86,7 +86,9 @@ extension CardsViewController : UITableViewDelegate,UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        navigationController?.pushViewController(CardDetailViewController(), animated: true)
+        let detailVC = CardDetailViewController()
+        detailVC.cardInfo = viewModel.allData[indexPath.row]
+        navigationController?.pushViewController(detailVC, animated: true)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
