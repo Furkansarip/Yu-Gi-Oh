@@ -14,7 +14,7 @@ class CardDetailView: UIView {
     let stackView = UIStackView()
     override init(frame: CGRect) {
         super.init(frame: frame)
-        backgroundColor = .blue
+        
     }
     
     required init?(coder: NSCoder) {
@@ -23,13 +23,18 @@ class CardDetailView: UIView {
     
     func configureView(cardInfo: CardModel?) {
         stackView.translatesAutoresizingMaskIntoConstraints = false
-        print(cardInfo?.attribute)
+        
         addSubview(stackView)
         stackView.axis = .horizontal
-        attributeLabel.text = "Attribute : \(cardInfo?.attribute ?? "")"
+        if cardInfo?.attribute != nil {
+            attributeLabel.text = "Attribute: \(cardInfo?.attribute ?? "")"
+        } else {
+            attributeLabel.text = "Archtype: \(cardInfo?.archetype ?? "")"
+        }
         raceLabel.text = "Race: \(cardInfo?.race ?? "")"
-        stackView.backgroundColor = .red
+        
         stackView.spacing = 5
+        stackView.distribution = .fill
         stackView.addArrangedSubview(attributeLabel)
         stackView.addArrangedSubview(raceLabel)
        

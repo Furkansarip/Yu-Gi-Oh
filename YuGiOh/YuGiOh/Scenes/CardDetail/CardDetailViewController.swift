@@ -17,6 +17,8 @@ class CardDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
+        let favButton = UIBarButtonItem(image: UIImage(systemName: "heart"), style: .plain, target: self, action: #selector(addFavorite))
+        navigationItem.rightBarButtonItem = favButton
         configureViews()
         
         
@@ -33,7 +35,7 @@ class CardDetailViewController: UIViewController {
         statsDetailView.configureView(cardInfo: cardInfo)
         imageView.contentMode = .scaleAspectFit
         
-        scrollView.indicatorStyle = .black
+        
         view.addSubview(scrollView)
         scrollView.addSubview(imageView)
         scrollView.addSubview(statsDetailView)
@@ -49,7 +51,7 @@ class CardDetailViewController: UIViewController {
             imageView.topAnchor.constraint(equalTo: scrollView.topAnchor),
             imageView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor),
             imageView.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor),
-            imageView.heightAnchor.constraint(equalToConstant: 400),
+            imageView.heightAnchor.constraint(equalToConstant: 500),
             
             statsDetailView.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 20),
             statsDetailView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor),
@@ -60,6 +62,12 @@ class CardDetailViewController: UIViewController {
         ])
         
         
+    }
+    
+    @objc func addFavorite() {
+        guard let card = cardInfo else { return }
+        let cardID : String = String(card.id ?? 0)
+        CoreDataService.shared.addFavorite(cardID: cardID, cardName: card.name, cardType: card.type)
     }
     
 

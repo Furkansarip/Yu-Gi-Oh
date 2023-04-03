@@ -211,7 +211,6 @@
 			children = (
 				7452DE2729CD986400FB579A /* CardCell.swift */,
 				7452DE2829CD986400FB579A /* CardCell.xib */,
-				74E039DC29D8833000A13B8A /* CardDetailView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -247,6 +246,7 @@
 		7452DE4529CF2DA200FB579A /* CardDetail */ = {
 			isa = PBXGroup;
 			children = (
+				74E039DC29D8833000A13B8A /* CardDetailView.swift */,
 				7452DE4629CF2DC600FB579A /* CardDetailViewController.swift */,
 			);
 			path = CardDetail;
