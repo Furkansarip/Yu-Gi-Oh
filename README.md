@@ -29,6 +29,6 @@ Favori kart grupları &#x2611;
 
 ## :star2: Ekran Görüntüleri 
 
-Launch Screen | First Onboard | Second Onboard | Games List
+Login Screen | Main Screen | Card Detail | Favorite List
 :-------------------------: | :-------------------------: | :-------------------------: | :-------------------------:
 ![Preview](https://github.com/Furkansarip/Yu-Gi-Oh/blob/main/Screenshots/loginScreen.png) | ![Preview](https://github.com/Furkansarip/Yu-Gi-Oh/blob/main/Screenshots/mainScreen.png) | ![Preview](https://github.com/Furkansarip/Yu-Gi-Oh/blob/main/Screenshots/cardDetail.png) | ![Preview](https://github.com/Furkansarip/Yu-Gi-Oh/blob/main/Screenshots/favorites.png)
